@@ -459,6 +459,7 @@ h1, h2, h3, p {
   gap: 50px;
   padding: 5px 20px;
   border-radius: 10px;
+  text-align: center;
 }
 .Pokemon__data-habilities{
   display: flex;
@@ -561,7 +562,7 @@ width: 100%;
     align-items: center;
     justify-content: space-around;
     height: 160px;
-    width: 60%;
+    width: 70%;
     max-width: 1400px;
     background-color: #EBEBEB;
     border-radius: 20px;
@@ -670,8 +671,8 @@ width: 100%;
         font-size: 40px;
       }
       .Pokemon__data-m{
-        padding: 30px 0 0 0;
-        height: 150px;
+        padding: 40px 0 0 0;
+        height: 110px;
       }
       .Pokemon__data-habilities{
         flex-direction: column;
@@ -681,6 +682,7 @@ width: 100%;
 @media  (max-width: 500px) {
   .Pokemon__statistics-img{
     height: 340px;
+    transform: translate(0%, -10%);
   }
   .Pokedex__header-black{
     height: 30px;
@@ -717,8 +719,17 @@ width: 100%;
         padding: 50px  0 50px 50px;
       }
       .Pokemon__data-m{
-          padding: 30px 0 0 0;
-          height: 130px;
+          padding: 20px 0 0 0;
+          height: 75px;
+      }
+      .Pokemon{
+        top: 200px;
+      }
+      .Pokemon__data-dimension{
+        gap:10px;
+      }
+      .Pokemon__statistics-data{
+        margin: 60px 0 40px 0;
       }
   }
 
