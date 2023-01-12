@@ -83,6 +83,55 @@ const Pokemon = () => {
         </div>
       </article>
 
+{/* Version movil */}
+
+<section className='Pokemon__movile'>
+      <div className='Pokemon__statistics-img'> 
+          <img src={dataPokemon?.sprites.other["official-artwork"]["front_default"] } alt="" /> 
+      </div>
+
+      <div className='Pokemon__data-m'>
+        <h1 className='Pokemon__data-h1'> {dataPokemon?.name} </h1> 
+      </div>
+
+      <div className={`Pokemon__data-div  pokemoncards__background-${dataPokemon?.types[0].type.name}`} >
+          <ul className={`Pokemon__data-dimension conteiner__img-backgraund-${dataPokemon?.types[0].type.name}`} >
+            <li> <span className='PokemonCards__span'>Weight</span> {dataPokemon?.weight} </li>
+            <li> <span className='PokemonCards__span'>Height</span> {dataPokemon?.height} </li>
+          </ul>
+          <p className={`Pokemon__data-dimension conteiner__img-backgraund-${dataPokemon?.types[0].type.name}`} > Abilities </p>
+          <ul className='Pokemon__data-habilities'>
+            {
+              dataPokemon?.abilities.map(ability => <li key={ability.ability.name} className='Pokemon__data-habilities-li'> {ability.ability.name} </li>)
+            }
+          </ul>
+      </div>
+
+       <div className='Pokemon__statistics-data'>
+         <h2 className='Pokemon__statistics-data-h2'> Statistics - {dataPokemon?.name} </h2>
+         <article>
+           {
+             dataPokemon?.stats.map  (stat =>(
+             <div key={stat.stat.name}> 
+               <h1 className='Pokemon__statistics-data-h1' >{stat.stat.name}</h1> 
+                 <div className='Pokemon__statistics-data-div'> 
+                   <div style={{width: percentageStat(stat.base_stat)}} className={`Pokemon__statistics-data-percentage pokemoncards__background-${dataPokemon?.types[0].type.name}`} ></div> 
+                      <p> {stat.base_stat}/150  </p> 
+                   </div>
+                 </div>  ))
+           }
+         </article>
+
+         <div className='Pokemon__statistics-div'>
+         <p className='Pokemon__statistics-data-p'> Type </p>
+         <h3 className='Pokemon__statistics-data-h3'> {typeData} </h3>
+         </div>
+      
+       </div>
+</section>
+
+{/* Version movil */}
+
      <article className={`Pokemon__moves  pokemoncards__background-${dataPokemon?.types[0].type.name}`}>
       <h2 className='Pokemon__moves-h2'> Moves </h2>
           <ul className='Pokemon__moves-lu'>
