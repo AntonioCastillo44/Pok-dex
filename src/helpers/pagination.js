@@ -2,7 +2,7 @@
 
 export const pagination = (currentPage, pokemonFilter) => {
 
-    const pokemonsPerPage = 15
+    const pokemonsPerPage = 16
 
     const sliceStart = (currentPage - 1) * pokemonsPerPage
     const sliceEnd = currentPage * pokemonsPerPage
