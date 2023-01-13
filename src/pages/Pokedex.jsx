@@ -91,7 +91,7 @@ const Pokedex = () => {
       <p> Welcome <span className='Pokedex__search-span'>{nameTrainer}</span>, here you can find favorite pokemon </p>
       <form onSubmit={handleSubmit} className='Pokedex__search-form'>
       
-          <input className='Pokedex__search-input' type="text"  placeholder='Search here...' id="namePokemon" />
+          <input className='Pokedex__search-input' type="text"  placeholder='Search here in lower case...' id="namePokemon" />
           <button className='Pokedex__search-button' type="submit"> Search </button>
         
         <select className='Pokedex__search-select' onChange={handleSelect}>
